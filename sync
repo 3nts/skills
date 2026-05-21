@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+usage() {
+  printf 'usage: %s <skill-name>\n' "${0##*/}" >&2
+  exit 2
+}
+
+(( $# == 1 )) || usage
+skill=$1
+[[ -n $skill && $skill != */* && $skill != . && $skill != .. ]] || usage
+
+src=${CLAUDE_CONFIG_DIR:-${HOME}/.claude}/skills/${skill}/
+dst=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)/${skill}/
+
+[[ -d $src ]] || { printf 'skill not found: %s\n' "$src" >&2; exit 1; }
+
+rsync -a --delete -- "$src" "$dst"
