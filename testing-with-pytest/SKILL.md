@@ -12,10 +12,6 @@ description: >
 
 # pytest patterns
 
-Reference for authoring and reviewing pytest tests. This file holds the high-frequency
-content (design principles, anti-pattern scan, quick reference). Detailed material is
-one level deep under `reference/`.
-
 ## Design principles
 
 - **One act per test.** The act is the single state-changing call. Arrange and cleanup
@@ -90,12 +86,3 @@ Quick scan list. Each one has signals and concrete fix code in
   pitfalls (asyncua / aiomqtt loop binding), event_loop migration, anyio alternative.
 - **`reference/anti-patterns.md`**: the 10 anti-patterns above with signals, why each
   bites, and concrete fix code.
-
-## Sources
-
-- pytest docs: https://docs.pytest.org/en/stable/
-- pytest-asyncio docs: https://pytest-asyncio.readthedocs.io/en/latest/
-- Martin Fowler, "Mocks Aren't Stubs":
-  https://martinfowler.com/articles/mocksArentStubs.html
-- Sandi Metz on testing seams; James Shore, "Testing Without Mocks"; Brian Okken,
-  "Python Testing with pytest" (pythontest.com)
