@@ -139,7 +139,7 @@ needs defeats the permission system's safety value — a misfiring skill
 can do damage the user would normally have caught.
 
 **Fix:** Grant the minimum. Use scoped Bash rules:
-`Bash(git status *), Bash(git diff *)` not raw `Bash`. Audit by reading
+`Bash(git status *) Bash(git diff *)` not raw `Bash`. Audit by reading
 the body and listing every tool call that appears — that's the floor.
 
 ## 10. Side-effect skill auto-invocable
