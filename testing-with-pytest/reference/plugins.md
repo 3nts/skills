@@ -49,10 +49,6 @@ def test_calls_collaborator(mocker):
     fake_publisher.send.assert_called_once_with(expected_payload)
 ```
 
-Always pass `autospec=True` so the mock rejects calls that the real object would not accept.
-Without autospec, `Mock` silently accepts any signature and any attribute, which masks API
-drift.
-
 ## tmp_path and tmp_path_factory
 
 `tmp_path` is function-scoped (one dir per test). `tmp_path_factory` is session-scoped

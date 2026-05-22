@@ -6,8 +6,8 @@ description: >
   built-in isolation plugins (monkeypatch, tmp_path, capsys, caplog), first-class
   pytest-asyncio coverage (asyncio_mode, loop scope, async fixtures, common pitfalls),
   and review heuristics. Invoke when authoring or reviewing test_*.py / *_test.py /
-  conftest.py, debugging fixture-scope or event-loop issues, or designing a Python
-  project's test architecture. Skip for unittest-only or doctest-only modules.
+  conftest.py, or debugging fixture-scope or event-loop issues. Skip for
+  unittest-only or doctest-only modules.
 ---
 
 # pytest patterns

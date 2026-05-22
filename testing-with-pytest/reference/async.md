@@ -1,14 +1,5 @@
 # pytest-asyncio
 
-## Contents
-
-- Mode (asyncio_mode)
-- Async fixtures
-- Loop scope
-- Asyncio library pitfalls
-- Migration: the `event_loop` fixture is gone
-- Alternative: anyio + pytest-anyio
-
 ## Mode
 
 ```toml
