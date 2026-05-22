@@ -134,11 +134,3 @@ the recommendation (data structures, concurrency, parsing, etc.). A
 review finding of "this is too long, rewrite in Python" is unhelpful;
 "this hand-parses JSON with `cut` and `awk`, will break on nested
 objects; Python with `json.load` is one line" is actionable.
-
-## Sources
-
-- [Wooledge BashWeaknesses](https://mywiki.wooledge.org/BashWeaknesses)
-  (canonical, comprehensive, opinionated)
-- [Google Shell Style Guide s1.2](https://google.github.io/styleguide/shellguide.html#s1.2-when-to-use-shell)
-- [Wooledge BashGuide/Practices](https://mywiki.wooledge.org/BashGuide/Practices)
-  ("Choose the right tool")

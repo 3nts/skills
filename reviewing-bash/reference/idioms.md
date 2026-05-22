@@ -1,8 +1,5 @@
 # Bash idioms reference
 
-Patterns that mark fluent bash. Prefer when they fit; don't refactor
-working code to insert them.
-
 ## Contents
 
 - Parameter expansion

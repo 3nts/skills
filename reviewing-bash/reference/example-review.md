@@ -1,18 +1,5 @@
 # Example review walkthrough
 
-One full review end-to-end, with real `shellcheck` 0.11.0 and `shfmt`
-v3.13.1 output. The script and the diagnostics are not invented; this
-is what the tools actually produce. Use this as the format model for
-your own reviews.
-
-The skill's `Output format` section in SKILL.md prescribes:
-
-1. Findings list, grouped by impact tier.
-2. The refactored script (only if a refactor was requested).
-
-What follows demonstrates that shape, including the cases where tool
-output and reviewer judgment disagree.
-
 ## Contents
 
 - The script

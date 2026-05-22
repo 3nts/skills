@@ -12,14 +12,10 @@ description: >
   stylistic) with rule citations and an optional refactored version. Scope
   is review and refactor of existing scripts, not greenfield authoring;
   bash primarily, sh portability noted where it intersects.
-allowed-tools: Bash(shellcheck *) Bash(shfmt *) Bash(bash -n *) Bash(bash -x *) Read Grep Edit
+allowed-tools: Bash(shellcheck *) Bash(shfmt *) Bash(bash -n *) Bash(bash -x *) Read Grep
 ---
 
 # Reviewing bash
-
-For reviewing and refactoring existing bash or POSIX-sh scripts. This file
-holds the review process, the high-frequency rules, and the open debates.
-Catalogues and deeper rationale are one level deep under `reference/`.
 
 ## Process
 
@@ -60,10 +56,10 @@ Don't narrate the review chronologically. Don't restate the script back
 to the user. Don't recommend `set -euo pipefail` reflexively (see "Error
 handling" below).
 
-## High-impact rules
+For a worked example end-to-end, see
+[reference/example-review.md](reference/example-review.md).
 
-The patterns that come up in almost every bash review. Detailed coverage
-in `reference/`; the headlines are here.
+## High-impact rules
 
 ### Quoting
 
@@ -174,6 +170,9 @@ blind spots, and reviewer heuristic in
 - **Variables hold data; functions hold code.** Don't store commands
   in strings. BashFAQ/050 is the canonical reference.
 
+Full BashPitfalls catalogue (1-65), grouped by category:
+[reference/pitfalls.md](reference/pitfalls.md).
+
 ## Tier 2: idioms, style, performance
 
 These tiers mark fluency, not correctness. Skip them unless the user
@@ -262,45 +261,3 @@ reviewer's reading of it.
 If neither shellcheck nor shfmt is available, say so in the review,
 fall back to `bash -n`, and apply the rules in this skill manually.
 
-## Reference index
-
-- [reference/correctness.md](reference/correctness.md): bug-causing
-  patterns. Quoting, tests, subshells, error handling, eval, races.
-- [reference/idioms.md](reference/idioms.md): fluent bash. Parameter
-  expansion, `printf -v`, process substitution, mapfile, here-strings.
-- [reference/style.md](reference/style.md): naming, formatting, file
-  structure, comments, function placement.
-- [reference/performance.md](reference/performance.md): fork cost,
-  builtins-vs-externals, single-pass tools, hot-loop hoisting.
-- [reference/pitfalls.md](reference/pitfalls.md): the Wooledge
-  BashPitfalls catalogue (1-65), grouped by category.
-- [reference/shellcheck-codes.md](reference/shellcheck-codes.md): SC
-  codes most-encountered in review, with one-line cause and fix.
-- [reference/strict-mode.md](reference/strict-mode.md): the
-  `set -euo pipefail` debate, blind spots, opt-in shellcheck checks,
-  migration patterns.
-- [reference/portability.md](reference/portability.md): bash version
-  differences, POSIX sh restrictions, GNU vs BSD coreutils, macOS
-  gotchas, BusyBox.
-- [reference/example-review.md](reference/example-review.md): one
-  full worked review with real shellcheck and shfmt output,
-  demonstrating the SKILL.md output format.
-- [reference/when-not-to-use-bash.md](reference/when-not-to-use-bash.md):
-  BashWeaknesses plus signals for switching language.
-
-## Primary sources
-
-- Wooledge: [BashFAQ](https://mywiki.wooledge.org/BashFAQ),
-  [BashPitfalls](https://mywiki.wooledge.org/BashPitfalls),
-  [BashGuide/Practices](https://mywiki.wooledge.org/BashGuide/Practices),
-  [BashWeaknesses](https://mywiki.wooledge.org/BashWeaknesses),
-  [Quotes](https://mywiki.wooledge.org/Quotes).
-- Google:
-  [Shell Style Guide](https://google.github.io/styleguide/shellguide.html).
-- ShellCheck: [wiki](https://www.shellcheck.net/wiki/),
-  [Checks](https://github.com/koalaman/shellcheck/wiki/Checks).
-- shfmt: [github.com/mvdan/sh](https://github.com/mvdan/sh),
-  [manpage](https://github.com/mvdan/sh/blob/master/cmd/shfmt/shfmt.1.scd).
-- Strict mode debate: Aaron Maxwell,
-  [Unofficial Bash Strict Mode](http://redsymbol.net/articles/unofficial-bash-strict-mode/);
-  counter-position in BashFAQ/105 and BashFAQ/112.

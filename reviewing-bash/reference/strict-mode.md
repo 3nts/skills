@@ -278,17 +278,3 @@ hard to track.
 
 The decision is not "strict mode yes/no", it's "do failures get
 detected somewhere". Both schools agree on that.
-
-## Sources
-
-- Aaron Maxwell,
-  [Unofficial Bash Strict Mode](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
-- Google
-  [s1.1](https://google.github.io/styleguide/shellguide.html#s1.1-which-shell-to-use)
-- Wooledge
-  [BashFAQ/105](https://mywiki.wooledge.org/BashFAQ/105),
-  [BashFAQ/112](https://mywiki.wooledge.org/BashFAQ/112),
-  [BashPitfalls/60](https://mywiki.wooledge.org/BashPitfalls#pf60)
-- ShellCheck
-  [SC2155](https://www.shellcheck.net/wiki/SC2155) (local-masks-exit-code),
-  and the opt-in checks above.

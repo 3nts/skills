@@ -297,18 +297,3 @@ feature set.
 5. **Spot-check the GNU-only tools.** `find -printf`, `sed -i`,
    `date -d`, `readlink -f`, `stat -c`, `xargs -d` are the most
    common cross-platform breakages.
-
-## Sources
-
-- Wooledge
-  [BashWeaknesses](https://mywiki.wooledge.org/BashWeaknesses) (on
-  bash's general limits),
-  [BashFAQ/061](https://mywiki.wooledge.org/BashFAQ/061) (which
-  features in which bash version).
-- Google
-  [s1.1](https://google.github.io/styleguide/shellguide.html#s1.1-which-shell-to-use).
-- ShellCheck SC3xxx codes: POSIX portability.
-- Apple's bash situation: bash 3.2 ships; bash 5 via Homebrew. zsh
-  is the macOS default *interactive* shell since Catalina but `/bin/sh`
-  and `/bin/bash` still exist (bash 3.2).
-- Alpine / BusyBox utility differences: per the BusyBox manpages.

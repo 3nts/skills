@@ -1,9 +1,5 @@
 # Bash correctness reference
 
-Bug-causing patterns. Quoting, tests, subshells, error handling, eval,
-races. Each rule cites the source it came from so a reviewer can verify
-rather than trust.
-
 ## Contents
 
 - Quoting

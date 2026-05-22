@@ -1,8 +1,5 @@
 # Bash style reference
 
-Things that don't change behaviour. They lower the cost of the next
-read. Most are from Google's Shell Style Guide; deviations called out.
-
 ## Contents
 
 - Shebang and file header
